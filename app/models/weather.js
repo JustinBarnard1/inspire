@@ -15,7 +15,7 @@ export default class Weather {
     this.celsius = Math.floor(data.main.temp - 273.15) + " " + "C"
     //console.log(this.celsius)
 
-
+    this.showF = true
 
   }
 }
