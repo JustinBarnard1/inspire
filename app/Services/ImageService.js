@@ -1,6 +1,6 @@
 import { api } from "./AxiosService.js"
 import { ProxyState } from "../AppState.js"
-//TODO create methods to retrieve data and save to the State
+//xxxxxxxx//TODO create methods to retrieve data and save to the State
 class ImageService {
     constructor() {
 
