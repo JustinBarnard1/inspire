@@ -28,13 +28,15 @@
                     <div class="card card-title">
                         <h2>To Do's</h2>
                     </div>
-                    <div id="todo-here" class="">
-                        <!-- Need to move to template -->
-                        <ul>${this.todoTemplate}</ul>
+                    <div class="">
+                        <ul id="todo-here">
+
+                        </ul>
+
                     </div>
-                    <form class="" onsubmit="app.todoController.addTodo(event, '${this.id}')">
+                    <form class="" onsubmit="app.todoController.addTodo(event)">
                         <div class="">
-                            <input type="todo-here" class="form" id="todo-here" placeholder="New ToDo">
+                            <input type="description" class="form" id="description" placeholder="New ToDo">
                             <button type="submit" class="form-inline btn btn-primary">Add</button>
                         </div>
                     </form>
