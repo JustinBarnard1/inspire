@@ -17,14 +17,31 @@
                 onclick="app.weatherController.toggleM()">
             </div>
         </div>
+        <!-- Maybe switch to a w3 clock -->
+        <div id="clock" class="row d-flex justify-content-center text-center text-light">
 
-        <div class="row d-flex justify-content-center text-center">
-            <iframe sandbox
-                src="http://free.timeanddate.com/clock/i7g2kpir/n42/fs48/fc00f/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4"
-                frameborder="0" width="296" height="112" allowTransparency="true"></iframe>
         </div>
         <div class="row">
-            <div class="col-6 text-center m-auto d-flex justify-content-center" id="quote-here"></div>
+            <div class="offset-9 col-3">
+                <div class="card m-2">
+                    <div class="card card-title">
+                        <h2>To Do's</h2>
+                    </div>
+                    <div id="todo-here" class="">
+                        <!-- Need to move to template -->
+                        <ul>${this.todoTemplate}</ul>
+                    </div>
+                    <form class="" onsubmit="app.todoController.addTodo(event, '${this.id}')">
+                        <div class="">
+                            <input type="todo-here" class="form" id="todo-here" placeholder="New ToDo">
+                            <button type="submit" class="form-inline btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-center m-auto d-flex justify-content-center text-light" id="quote-here"></div>
         </div>
     </main>
     <footer class="container-fluid bg-transparent text-dark">
