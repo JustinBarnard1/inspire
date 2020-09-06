@@ -24,11 +24,29 @@ class TodoService {
 
   async toggleTodoStatus(todoId) {
     let todo = await ProxyState.todos.find(todo => todo.id == todoId);
+    if (!todo) {
+      throw new Error("Todo does not exist")
+    }
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
+    if (todo.completed == true) {
+      todo.completed = false
+      todo.toggle = ""
+      let res = await api.put(url + todoId, todo);
+      console.log(todo)
+      ProxyState.todos = ProxyState.todos
+    } else {
+      todo.completed = true
+      todo.toggle = "checked"
+      let res = await api.put(url + todoId, todo);
+      console.log(todo)
+      ProxyState.todos = ProxyState.todos
+    }
 
-    let res = await api.put(url + todoId, todo);
+
+
+
     //TODO how do you trigger this change
   }
 

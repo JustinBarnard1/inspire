@@ -51,7 +51,9 @@
   background-repeat: no-repeat;
 }
 
-
+ul {
+    list-style-type:none;
+}
 
 
 html {
