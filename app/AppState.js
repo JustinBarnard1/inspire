@@ -1,7 +1,7 @@
-import Todo from "./models/Todo.js"
-import Weather from "./models/Weather.js"
-import { EventEmitter } from "./Utils/EventEmitter.js"
-import { isValidProp } from "./Utils/isValidProp.js"
+import Todo from "./models/Todo.js";
+import Weather from "./models/Weather.js";
+import { EventEmitter } from "./Utils/EventEmitter.js";
+import { isValidProp } from "./Utils/isValidProp.js";
 
 //xxxxxxxx// TODO you will want to add all your other data to the AppState
 class AppState extends EventEmitter {
