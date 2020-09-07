@@ -5,7 +5,8 @@ import { ProxyState } from "../AppState.js"
 function _drawTodos() {
   let tTodo = ProxyState.todos
   let template = ""
-  tTodo.forEach(t => template += t.Template)
+  console.log(tTodo)
+  tTodo.forEach(t => template += t.getTemplate())
   document.getElementById("todo-here").innerHTML = template
 
 }

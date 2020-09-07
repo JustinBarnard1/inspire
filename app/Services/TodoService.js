@@ -32,20 +32,14 @@ class TodoService {
     //		change its completed status to whatever it is not (ex: false => true or true => false)
     if (todo.completed == true) {
       todo.completed = false
-      todo.toggle = ""
-      let res = await api.put(url + todoId, todo);
-      console.log(todo)
-      ProxyState.todos = ProxyState.todos
+      //console.log(x)
     } else {
       todo.completed = true
-      todo.toggle = "checked"
-      let res = await api.put(url + todoId, todo);
-      console.log(todo)
-      ProxyState.todos = ProxyState.todos
+      //console.log(y)
     }
-
-
-
+    let res = await api.put(url + todoId, todo);
+    console.log(res)
+    ProxyState.todos = ProxyState.todos
 
     //TODO how do you trigger this change
   }
@@ -58,8 +52,6 @@ class TodoService {
     ProxyState.todos = ProxyState.todos.filter(t => t.id !== todoId)
   }
 }
-
-
 
 
 
