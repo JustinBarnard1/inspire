@@ -4,13 +4,7 @@ export default class Todo {
     this.description = description;
     this.completed = completed;
 
-
-
   }
-
-
-
-
 
   getTemplate() {
     if (this.completed == true) {
