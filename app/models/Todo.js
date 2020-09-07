@@ -3,6 +3,7 @@ export default class Todo {
     this.id = _id;
     this.description = description;
     this.completed = completed;
+    this.tCount = 0
 
   }
 

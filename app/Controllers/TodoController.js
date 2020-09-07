@@ -5,16 +5,23 @@ import { ProxyState } from "../AppState.js"
 function _drawTodos() {
   let tTodo = ProxyState.todos
   let template = ""
-  console.log(tTodo)
+  //console.log(tTodo)
   tTodo.forEach(t => template += t.getTemplate())
   document.getElementById("todo-here").innerHTML = template
+}
 
+function _drawCount() {
+  let tTodo = ProxyState.todos
+  let count = tTodo.length
+  console.log(count)
+  document.getElementById("todo-count").innerText = "To Do's: " + count
 }
 
 export default class TodoController {
   constructor() {
     //xxxxxxxxx//TODO Remember to register your subscribers
     ProxyState.on('todos', _drawTodos)
+    ProxyState.on('todos', _drawCount)
     todoService.getTodos();
   }
 
@@ -32,7 +39,7 @@ export default class TodoController {
     var todo = {
       description: form.description.value
     };
-    console.log(todo)
+    //console.log(todo)
     try {
       todoService.addTodo(todo);
     } catch (error) {
