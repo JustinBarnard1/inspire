@@ -1,7 +1,7 @@
 import todoService from "../Services/TodoService.js";
 import { ProxyState } from "../AppState.js"
 
-//TODO Create the draw function
+//xxxxxxxxx//TODO Create the draw function
 function _drawTodos() {
   let tTodo = ProxyState.todos
   let template = ""
@@ -13,7 +13,7 @@ function _drawTodos() {
 
 export default class TodoController {
   constructor() {
-    //TODO Remember to register your subscribers
+    //xxxxxxxxx//TODO Remember to register your subscribers
     ProxyState.on('todos', _drawTodos)
     todoService.getTodos();
   }
@@ -28,7 +28,7 @@ export default class TodoController {
   addTodo(event) {
     event.preventDefault();
     var form = event.target;
-    //TODO build the todo object from the data that comes into this method
+    //xxxxxxxx//TODO build the todo object from the data that comes into this method
     var todo = {
       description: form.description.value
     };
