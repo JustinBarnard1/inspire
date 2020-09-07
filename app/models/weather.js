@@ -1,4 +1,4 @@
-export default class Weather {
+export class Weather {
   constructor(data) {
 
     //console.log('[RAW WEATHER API DATA]', data);
