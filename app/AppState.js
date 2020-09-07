@@ -1,5 +1,5 @@
-import Todo from "./models/Todo.js";
 import Weather from "./models/Weather.js";
+import Todo from "./models/Todo.js";
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 
